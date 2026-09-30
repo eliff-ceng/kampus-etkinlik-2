@@ -1,0 +1,264 @@
+/* Ad Soyad = 2416501075 */
+
+:root {
+    --yesil: #2f7d32;
+    --koyu-yesil: #1f5c24;
+    --acik-yesil: #e8f3e8;
+    --zemin: #f5f8f3;
+    --beyaz: #ffffff;
+    --yazi: #263326;
+    --kenar: #a9c5aa;
+    --turuncu: #e87532;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px;
+    background-color: var(--zemin);
+    color: var(--yazi);
+    font-family: "Palatino Linotype", Palatino, Georgia, serif;
+}
+
+/* ANA BAŞLIK */
+
+h1 {
+    margin: 0 0 20px 0;
+    color: var(--koyu-yesil);
+    font-size: 30px;
+}
+
+/* DOSYA ADLARI */
+
+.dosya-adi {
+    margin: 15px 0 6px 0;
+    color: var(--turuncu);
+    font-family: monospace;
+    font-size: 15px;
+}
+
+/* SAYFA */
+
+.sayfa {
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 25px;
+    background-color: var(--beyaz);
+    border: 1px solid var(--kenar);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* YEŞİL SAYFA BAŞLIĞI */
+
+.baslik {
+    padding: 14px 18px;
+    background-color: var(--yesil);
+    color: white;
+}
+
+.baslik h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.baslik p {
+    margin: 5px 0 0 0;
+}
+
+/* NAVİGASYON */
+
+nav {
+    padding: 10px 15px;
+    background-color: var(--acik-yesil);
+    border-bottom: 1px solid var(--kenar);
+}
+
+nav a {
+    margin-right: 15px;
+    color: var(--koyu-yesil);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* SAYFA İÇERİĞİ */
+
+.icerik {
+    padding: 20px;
+}
+
+.icerik h2,
+.icerik h3 {
+    color: var(--koyu-yesil);
+}
+
+.icerik p {
+    line-height: 1.6;
+}
+
+/* ETKİNLİK KARTLARI */
+
+.etkinlik-kartlari {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.etkinlik-karti {
+    background-color: var(--beyaz);
+    border: 1px solid var(--kenar);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* KARTIN YEŞİL ÜST KISMI */
+
+.etkinlik-karti h2 {
+    margin: 0;
+    padding: 10px 12px;
+    background-color: var(--yesil);
+    color: white;
+    font-size: 18px;
+}
+
+/* KART İÇİ */
+
+.etkinlik-karti .icerik {
+    padding: 12px;
+}
+
+/* ETKİNLİK BİLGİSİ */
+
+.etkinlik-bilgi {
+    margin-bottom: 8px;
+    padding: 9px;
+    background-color: var(--acik-yesil);
+    border-left: 4px solid var(--yesil);
+    border-radius: 4px;
+}
+
+.etkinlik-bilgi strong {
+    color: var(--koyu-yesil);
+}
+
+/* PROGRAM KARTLARI */
+
+.program-kartlari {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.program-karti {
+    padding: 15px;
+    background-color: var(--beyaz);
+    border: 1px solid var(--kenar);
+    border-radius: 8px;
+}
+
+.program-karti h3 {
+    margin-top: 0;
+    color: var(--yesil);
+}
+
+/* FORM */
+
+form {
+    padding: 20px;
+    background-color: var(--beyaz);
+    border: 1px solid var(--kenar);
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    color: var(--koyu-yesil);
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid var(--kenar);
+    border-radius: 5px;
+    background-color: white;
+    color: var(--yazi);
+    font-family: inherit;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--yesil);
+}
+
+/* BUTON */
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--yesil);
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--koyu-yesil);
+}
+
+/* GENEL LİNKLER */
+
+a {
+    color: var(--yesil);
+}
+
+a:hover {
+    color: var(--koyu-yesil);
+}
+
+/* MOBİL */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .etkinlik-kartlari,
+    .program-kartlari {
+        grid-template-columns: 1fr;
+    }
+
+    .icerik {
+        padding: 12px;
+    }
+
+    nav a {
+        display: block;
+        margin: 7px 0;
+    }
+}
